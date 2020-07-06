@@ -88,6 +88,7 @@ export default class NavComponent extends React.Component<Props, State> {
                                 key={index}
                                 text={value.text}
                                 href={value.href}
+                                className={this.getClassColorName(this.state.pagePathName)}
                             />
                         ))}
                     </div>
@@ -118,7 +119,8 @@ export default class NavComponent extends React.Component<Props, State> {
                         </span>
                     </div>
                     <div className={"downPanel__pageScroll"}>
-                        <span className={"downPanel__pageScroll__text"}>
+                        <span
+                            className={`downPanel__pageScroll__text downPanel__pageScroll__text${this.getClassColorName(this.state.pagePathName)}`}>
                             {downPanel.text}
                         </span>
                     </div>
@@ -161,15 +163,16 @@ export default class NavComponent extends React.Component<Props, State> {
 interface Props3 {
     href: string;
     text: string;
+    className: string;
 }
 
 export class NavComponentPageLink extends React.Component<Props3, any> {
     render() {
-        const {href, text} = this.props;
+        const {href, text, className} = this.props;
         return (
             <Link
                 to={href}
-                className={"topPanel__pageNavigation__link"}
+                className={`topPanel__pageNavigation__link topPanel__pageNavigation__link${className}`}
             >
                 {text}
             </Link>
