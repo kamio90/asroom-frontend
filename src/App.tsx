@@ -2,7 +2,59 @@ import React from 'react';
 import NavComponent from "./components/Nav";
 import ASRoomLogo from './img/ASRoomLogo.png';
 
-class App extends React.Component<any, any> {
+interface State {
+    isPL: boolean;
+    PL: {
+        Nav: {
+            mainLink: {
+                href: string,
+                text: string
+            }[],
+            Logo: {
+                src: string,
+                alt: string,
+            },
+            pageLink: {
+                href: string,
+                text: string
+            }[],
+            downPanel: {
+                language: string[],
+                text: string
+            },
+            colorThemes: {
+                href: string,
+                className: string
+            }[]
+        }
+    };
+    EN: {
+        Nav: {
+            mainLink: {
+                href: string,
+                text: string
+            }[],
+            Logo: {
+                src: string,
+                alt: string,
+            },
+            pageLink: {
+                href: string,
+                text: string
+            }[],
+            downPanel: {
+                language: string[],
+                text: string
+            },
+            colorThemes: {
+                href: string,
+                className: string
+            }[]
+        }
+    }
+}
+
+class App extends React.Component<any, State> {
 
     state = {
         isPL: true,
@@ -14,19 +66,19 @@ class App extends React.Component<any, any> {
                         text: "O nas"
                     },
                     {
-                        href: "/",
+                        href: "/odnawialnezrodlaenergi",
                         text: "Odnawialne Zrodla Energii"
                     },
                     {
-                        href: "/",
+                        href: "/systemyoczyszczaniasciekow",
                         text: "Systemy Oczyszczania Sciekow"
                     },
                     {
-                        href: "/",
+                        href: "/modernizacja",
                         text: "Modernizacja"
                     },
                     {
-                        href: "/",
+                        href: "/panelhandlowy",
                         text: "Panel Handlowy"
                     }
                 ],
@@ -43,6 +95,32 @@ class App extends React.Component<any, any> {
                         href: "/",
                         text: "Kontakt"
                     }
+                ],
+                downPanel: {
+                    language: ["PL", "EN"],
+                    text: "Scroll"
+                },
+                colorThemes: [
+                    {
+                        href: "/",
+                        className: "--red"
+                    },
+                    {
+                        href: "/odnawialnezrodlaenergi",
+                        className: "--green"
+                    },
+                    {
+                        href: "/systemyoczyszczaniasciekow",
+                        className: "--blue"
+                    },
+                    {
+                        href: "/modernizacja",
+                        className: "--red"
+                    },
+                    {
+                        href: "/panelhandlowy",
+                        className: "--yellow"
+                    }
                 ]
             }
         },
@@ -54,19 +132,19 @@ class App extends React.Component<any, any> {
                         text: "About Us"
                     },
                     {
-                        href: "/",
+                        href: "/renewableenergysources",
                         text: "Renewable Energy Sources"
                     },
                     {
-                        href: "/",
+                        href: "/sewagetreatmentsystems",
                         text: "Sewage Treatment Systems"
                     },
                     {
-                        href: "/",
+                        href: "/modernization",
                         text: "Modernization"
                     },
                     {
-                        href: "/",
+                        href: "/tradepanel",
                         text: "Trade Panel"
                     }
                 ],
@@ -83,6 +161,32 @@ class App extends React.Component<any, any> {
                         href: "/",
                         text: "Contact"
                     }
+                ],
+                downPanel: {
+                    language: ["PL", "EN"],
+                    text: "Scroll"
+                },
+                colorThemes: [
+                    {
+                        href: "/",
+                        className: "--red"
+                    },
+                    {
+                        href: "/renewableenergysources",
+                        className: "--green"
+                    },
+                    {
+                        href: "/sewagetreatmentsystems",
+                        className: "--blue"
+                    },
+                    {
+                        href: "/modernization",
+                        className: "--red"
+                    },
+                    {
+                        href: "/tradepanel",
+                        className: "--yellow"
+                    }
                 ]
             }
         }
@@ -91,7 +195,10 @@ class App extends React.Component<any, any> {
     render() {
         return (
             <div className="App">
-                <NavComponent Nav={this.state.isPL ? this.state.PL.Nav : this.state.EN.Nav}/>
+                <NavComponent
+                    Nav={this.state.isPL ? this.state.PL.Nav : this.state.EN.Nav}
+                    isPL={this.state.isPL}
+                />
             </div>
         );
     }

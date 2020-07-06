@@ -1,0 +1,26 @@
+@mixin flex {
+  display: flex;
+}
+
+@mixin flex-justify-align($justify, $align) {
+  @include flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin flex-wrap {
+  @include flex;
+  flex-wrap: wrap;
+}
+
+@mixin flex-justify-align-wrap($justify, $align) {
+  @include flex-justify-align($justify, $align);
+  @include flex-wrap;
+}
+
+@mixin flex-basis($amount) {
+  flex-basis: $amount;
+}
+
+
+

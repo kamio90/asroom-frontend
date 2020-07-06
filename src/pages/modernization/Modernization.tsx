@@ -1,6 +1,15 @@
 import React from "react";
 
-export default class ModernizationComponent extends React.Component<any, any> {
+interface Props {
+    changePathName: (param: string) => void;
+}
+
+export default class ModernizationComponent extends React.Component<Props, any> {
+
+    componentDidMount() {
+        this.props.changePathName(window.location.pathname);
+    }
+
     render() {
         return (
             <div>

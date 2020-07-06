@@ -1,0 +1,11 @@
+@mixin position($type) {
+  position: $type;
+}
+
+@mixin position-x-y($type, $x, $y) {
+  @include position($type);
+  left: $x;
+  top: $y;
+}
+
+
