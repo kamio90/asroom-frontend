@@ -1,0 +1,143 @@
+@import './../global/mixins/flex';
+@import './../global/variables/variables';
+
+.footerContact {
+	@include flex;
+	@include flex-justify-align(center, center);
+	flex-wrap: wrap;
+	height: 100vh;
+	width: 100%;
+	outline: none;
+
+	&__box {
+		@include flex-justify-align(center, center);
+		@include flex;
+		flex-basis: 80%;
+		padding-top: 20rem;
+		padding-left: 20rem;
+		&__form {
+			flex-basis: 50%;
+			justify-content: end;
+
+			input[type='text'],
+			input[type='tel'],
+			input[type='email'] {
+				margin: 2rem 2rem 0 0;
+			}
+
+			&__title {
+				text-transform: uppercase;
+				font-weight: 100;
+				letter-spacing: 0.5rem;
+				font-size: 4rem;
+			}
+			&__line {
+				height: 0.1rem;
+				width: 80%;
+				background-color: black;
+				position: relative;
+			}
+			&__card {
+				&__firstName {
+					border: none;
+					padding: 1.5rem 2rem;
+					width: 45%;
+					background-color: #d9d9d9;
+				}
+
+				&__lastName {
+					border: none;
+					padding: 1.5rem 2rem;
+					width: 45%;
+					background-color: #d9d9d9;
+				}
+				&__phoneNumber {
+					border: none;
+					padding: 1.5rem 2rem;
+					width: 45%;
+					background-color: #d9d9d9;
+				}
+				&__email {
+					border: none;
+					padding: 1.5rem 2rem;
+					width: 45%;
+					background-color: #d9d9d9;
+				}
+				&__message {
+					border: none;
+					background-color: #d9d9d9;
+					width: 80%;
+					margin-top: 2rem;
+					resize: none;
+					width: 61.5rem;
+					height: 20rem;
+					padding: 1.5rem;
+					font-family: 'Lato', sans-serif;
+				}
+				&__regulations {
+					@include flex;
+					padding: 2rem 0;
+					flex-wrap: nowrap;
+					&__check {
+					}
+					&__checkInfo {
+						padding-left: 1rem;
+					}
+				}
+				&__button {
+					text-transform: uppercase;
+					padding: 1.5rem 3rem;
+					border-radius: 0;
+					background: transparent;
+					display: flex;
+					font-size: 1.8rem;
+					border: 1px solid $greenDark;
+
+					&__line {
+						display: block;
+						height: 0.1rem;
+						width: 4rem;
+						background-color: black;
+						margin: 0.8rem 0 0 2rem;
+						position: relative;
+
+						&::after {
+							content: '';
+							position: absolute;
+							height: 0.3rem;
+							width: 2.5rem;
+							background-color: green;
+							top: -0.1rem;
+							left: 2.5rem;
+						}
+					}
+				}
+			}
+		}
+
+		&__info {
+			padding-left: 2rem;
+			flex-basis: 50%;
+			&__city {
+				font-weight: bold;
+				font-size: 2.4rem;
+			}
+			&__street {
+				font-weight: 100;
+				font-size: 1.8rem;
+				letter-spacing: 0.2rem;
+			}
+			&__phoneNumber {
+				font-weight: 100;
+				font-size: 1.8rem;
+				letter-spacing: 0.2rem;
+			}
+		}
+	}
+	&__copyright {
+		flex-basis: 100%;
+		text-align: center;
+		font-size: 1.4rem;
+		color: #ccc;
+	}
+}

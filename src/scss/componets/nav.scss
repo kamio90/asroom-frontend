@@ -1,22 +1,55 @@
-@import "./../global/mixins/flex";
-@import "./../global/variables/variables";
-
+@import './../global/mixins/flex';
+@import './../global/variables/variables';
 
 .aside {
   @include flex-justify-align-wrap(space-around, center);
   transform: translateX(-100%);
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  width: 40%;
+  width: 30%;
   background-color: $redDark;
   color: $grayLight;
+  z-index: 100;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 50%;
+  }
+  @media (min-width: 320px) and (max-width: 480px) {
+    width: 100%;
+  }
+
+  &__burger {
+    position: absolute;
+    top: 5rem;
+    left: 5rem;
+    width: 3.6rem;
+    height: 3.6rem;
+    cursor: pointer;
+
+    span:first-of-type {
+      // flex-basis: 50%;
+      width: 100%;
+      height: 0.1rem;
+      background-color: $grayDark;
+      display: block;
+      transform: rotate(45deg);
+    }
+
+    span:last-of-type {
+      // flex-basis: 100%;
+      width: 100%;
+      height: 0.1rem;
+      background-color: $grayDark;
+      display: block;
+      transform: rotate(-45deg);
+    }
+  }
 
   &__box {
     width: 100%;
-    height: 100%;
+    height: 80%;
     @include flex-justify-align-wrap(space-around, center);
 
     &__navHolder {
@@ -28,10 +61,96 @@
         @include flex-basis(100%);
         @include flex-justify-align(flex-end, center);
 
-
         &__item {
           text-transform: uppercase;
-          @include flex-basis(40%);
+          @include flex-basis(10%);
+          word-spacing: 50rem;
+          text-align: right;
+          margin-right: 10rem;
+          line-height: 5rem;
+          font-size: 3rem;
+          font-weight: 100;
+          @media (min-width: 320px) and (max-width: 480px) {
+            margin-right: 5rem;
+            font-size: 2.5rem;
+          }
+
+          &::after {
+            content: '';
+            display: block;
+            width: 27rem;
+            height: 0.1rem;
+            background-color: #5b1717;
+            margin-top: 3rem;
+          }
+        }
+      }
+    }
+  }
+
+  //Paleta kolorow dla czerwonego
+  &--red {
+    background-color: $redDark;
+
+    .aside__box {
+      &__navHolder {
+        &__box {
+          &__item {
+            &::after {
+              background-color: #5b1717;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //Paleta kolorw dla zielonego
+  &--green {
+    background-color: $greenDark;
+
+    .aside__box {
+      &__navHolder {
+        &__box {
+          &__item {
+            &::after {
+              background-color: #19440e;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //Paleta kolorw dla niebieskiego
+  &--blue {
+    background-color: $blueDark;
+
+    .aside__box {
+      &__navHolder {
+        &__box {
+          &__item {
+            &::after {
+              background-color: #1b368a;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //Paleta kolorw dla zolty
+  &--yellow {
+    background-color: $orangeLight;
+
+    .aside__box {
+      &__navHolder {
+        &__box {
+          &__item {
+            &::after {
+              background-color: #7a5722;
+            }
+          }
         }
       }
     }
@@ -43,11 +162,24 @@
 }
 
 .topPanel {
-  @include flex-justify-align(space-around, center);
+  @include flex-justify-align(space-between, center);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  padding: 0 10rem;
+  z-index: 10;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    padding: 0 3rem;
+  }
+  @media (min-width: 320px) and (max-width: 480px) {
+    flex-wrap: wrap;
+    padding: 0;
+    text-align: center;
+  }
+  @media (min-width: 481px) and (max-width: 767px) {
+    padding: 0;
+  }
 
   &__iconHolder {
     @include flex-basis(10%);
@@ -58,6 +190,15 @@
       height: 3.6rem;
       margin: 5rem;
       @include flex-justify-align-wrap(space-around, center);
+      transition: 0.3s;
+      @media (min-width: 320px) and (max-width: 480px) {
+        margin: 5rem 3rem 4.5rem 3rem;
+      }
+
+      &:hover {
+        cursor: pointer;
+        filter: contrast(1%);
+      }
 
       span {
         @include flex-basis(100%);
@@ -68,31 +209,96 @@
 
     &__image {
       @include flex-basis(70%);
+      @media (min-width: 320px) and (max-width: 480px) {
+        height: auto;
+        width: 23rem;
+        padding-left: 3rem;
+      }
     }
   }
-
 
   &__pageNavigation {
     @include flex-basis(20%);
     position: relative;
-
-    &::after {
-      content: '';
-      height: 3rem;
-      width: 2px;
-      background-color: $redDark;
-      position: absolute;
-      top: 50%;
-      left: 25%;
-      transform: translate(0%, -50%);
+    @media (min-width: 320px) and (max-width: 480px) {
+      flex-basis: 100%;
+      text-align: center;
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+      flex-basis: 30%;
+    }
+    @media (min-width: 1025px) and (max-width: 1280px) {
+      flex-basis: 30%;
+    }
+    @media (min-width: 481px) and (max-width: 767px) {
+      flex-basis: 40%;
     }
 
     &__link {
       padding: 0 2rem;
+      font-size: 1.9rem;
       text-transform: uppercase;
       display: inline-flex;
+      position: relative;
+      flex-wrap: wrap;
+
+      @media (min-width: 768px) and (max-width: 1024px) {
+        font-size: 1.5rem;
+      }
+      @media (min-width: 320px) and (max-width: 480px) {
+      }
+
+      &:first-of-type::after {
+        content: '';
+        height: 100%;
+        width: 0.2rem;
+        background-color: $redDark;
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        transform: translate(0%, -50%);
+      }
+
+      @media all and (min-width: 320px) and (max-width: 480px) {
+        margin: 0 auto;
+      }
     }
 
+    &--red {
+      .topPanel__pageNavigation__link {
+        &:first-of-type::after {
+          background-color: $redDark;
+        }
+      }
+    }
+
+    //Paleta kolorw dla niebieskiego
+    &--blue {
+      // background-color: blue;
+      .topPanel__pageNavigation__link {
+        &:first-of-type::after {
+          background-color: $blueDark;
+        }
+      }
+    }
+
+    //Paleta kolorw dla zielonego
+    &--green {
+      .topPanel__pageNavigation__link {
+        &:first-of-type::after {
+          background-color: #19440e;
+        }
+      }
+    }
+
+    //Paleta kolorw dla zolty
+    &--yellow {
+      .topPanel__pageNavigation__link {
+        &:first-of-type::after {
+          background-color: $orangeLight;
+        }
+      }
+    }
   }
 }
 
@@ -101,4 +307,116 @@
   position: fixed;
   bottom: 0;
   left: 0;
+  z-index: 5;
+  @include flex-justify-align(space-between, center);
+
+  &__languageSwitcher {
+    @include flex-justify-align-wrap(flex-start, flex-start);
+    padding: 2rem 6rem;
+    position: relative;
+    @media (min-width: 320px) and (max-width: 480px) {
+      padding: 0 4rem;
+    }
+
+    &__text {
+      @include flex-basis(100%);
+      font-size: 1.4rem;
+      font-weight: 100;
+      padding-top: 1rem;
+      cursor: pointer;
+    }
+
+    //tutaj style dla elementu ktory jest aktywny w tym wypadku zmiana jezyka
+    &__text--active {
+      font-weight: bold;
+    }
+
+    //Paleta kolorow dla czerwonego
+    &__text--active--red {
+      //background-color: $redDark;
+      color: $redDark;
+    }
+
+    //Paleta kolorw dla zielonego
+    &__text--active--green {
+      color: $greenDark;
+    }
+
+    //Paleta kolorw dla niebieskiego
+    &__text--active--blue {
+      color: $blueDark;
+    }
+
+    //Paleta kolorw dla zolty
+    &__text--active--yellow {
+      color: $orangeLight;
+    }
+  }
+
+  &__pageScroll {
+    text-transform: uppercase;
+    transform: rotate(90deg);
+    margin: 10rem 8rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    cursor: pointer;
+    @media (min-width: 768px) and (max-width: 1024px) {
+      margin: 10rem 3rem;
+    }
+    @media (min-width: 320px) and (max-width: 480px) {
+      margin: 6rem 2rem;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 1.9rem;
+      left: 0;
+      width: 50%;
+      height: 0.3rem;
+      background-color: black;
+      z-index: 2;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      left: 0.5rem;
+      top: 2rem;
+      display: block;
+      width: 250%;
+      height: 0.1rem;
+      background-color: $grayDark;
+    }
+
+    //Paleta kolorow dla czerwonego
+    &--red {
+      &::before {
+        background-color: $redDark;
+      }
+    }
+
+    //Paleta kolorw dla zielonego
+    &--green {
+      &::before {
+        background-color: $greenDark;
+      }
+    }
+
+    //Paleta kolorw dla niebieskiego
+    &--blue {
+      &::before {
+        background-color: $blueDark;
+      }
+    }
+
+    //Paleta kolorw dla zolty
+    &--yellow {
+      &::before {
+        background-color: $orangeLight;
+      }
+    }
+  }
 }

@@ -1,11 +1,17 @@
-@import "./reset/reset";
-@import "./variables/variables";
-@import "./mixins/flex";
-@import "./mixins/postion";
-@import "./typography/typography";
+@import './reset/reset';
+@import './variables/variables';
+@import './mixins/flex';
+@import './mixins/postion';
+@import './typography/typography';
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 
 html {
-    background-color: $whiteDark;
-    font-family: 'Lato', sans-serif;
+  background-color: $whiteDark;
+  font-family: 'Lato', sans-serif;
+  @media (min-width: 320px) and (max-width: 480px) {
+    font-size: 8px;
+  }
+  @media (min-width: 481px) and (max-width: 767px) {
+    font-size: 7px;
+  }
 }
