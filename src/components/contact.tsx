@@ -86,10 +86,10 @@ export default class ContactComponent extends React.Component<Props, any> {
 							</div>
 							<button
 								type='submit'
-								className='footerContact__box__form__card__button'
+								className={`footerContact__box__form__card__button footerContact__box__form__card__button${colorName}`}
 							>
 								{buttonText}
-								<span className='footerContact__box__form__card__button__line' />
+								<span className={`footerContact__box__form__card__button__line footerContact__box__form__card__button__line${colorName}`} />
 							</button>
 						</form>
 					</div>

@@ -30,12 +30,52 @@
 				font-weight: 100;
 				letter-spacing: 0.5rem;
 				font-size: 4rem;
+				margin-bottom: 2rem;
 			}
 			&__line {
+				display: block;
 				height: 0.1rem;
 				width: 80%;
 				background-color: black;
 				position: relative;
+
+				&::before {
+					content: '';
+					position: absolute;
+					height: 0.3rem;
+					width: 14rem;
+					background-color: $greenDark;
+					top: -0.1rem;
+					left: 0;
+					@media (min-width: 320px) and (max-width: 1280px) {
+					  left: 50%;
+					  transform: translateX(-50%);
+					}
+				}
+
+				&--red {
+					&::before {
+						background-color: $redDark;
+					}
+				}
+
+				&--green {
+					&::before {
+						background-color: $greenDark;
+					}
+				}
+
+				&--blue {
+					&::before {
+						background-color: $blueDark;
+					}
+				}
+
+				&--orange {
+					&::before {
+						background-color: $orangeLight;
+					}
+				}
 			}
 			&__card {
 				&__firstName {
@@ -93,6 +133,18 @@
 					font-size: 1.8rem;
 					border: 1px solid $greenDark;
 
+					&--red {
+						border: 1px solid $redDark;
+					}
+
+					&--blue {
+						border: 1px solid $blueDark;
+					}
+
+					&--orange {
+						border: 1px solid $orangeLight;
+					}
+
 					&__line {
 						display: block;
 						height: 0.1rem;
@@ -106,9 +158,27 @@
 							position: absolute;
 							height: 0.3rem;
 							width: 2.5rem;
-							background-color: green;
+							background-color: $greenDark;
 							top: -0.1rem;
 							left: 2.5rem;
+						}
+
+						&--red {
+							&::after {
+								background-color: $redDark;
+							}
+						}
+
+						&--blue {
+							&::after {
+								background-color: $blueDark;
+							}
+						}
+
+						&--orange {
+							&::after {
+								background-color: $orangeLight;
+							}
 						}
 					}
 				}

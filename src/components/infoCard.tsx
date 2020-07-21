@@ -41,7 +41,7 @@ export default class InfoCardComponent extends React.Component<Props, any> {
 						</p>
 						<button className={'infoCard__box__textHolder__button'}>
 							{buttonText}
-							<span className='infoCard__box__textHolder__button__line' />
+							<span className={`infoCard__box__textHolder__button__line infoCard__box__textHolder__button__line${colorName}`} />
 						</button>
 					</div>
 					<div className={'infoCard__box__imgHolder'}>

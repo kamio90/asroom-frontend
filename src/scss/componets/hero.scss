@@ -32,6 +32,18 @@
 				background-color: $greenDark;
 				color: $grayLight;
 
+				&--red {
+					background-color: $redDark;
+				}
+
+				&--blue {
+					background-color: $blueDark;
+				}
+
+				&--orange {
+					background-color: $orangeLight;
+				}
+
 				&__line {
 					position: absolute;
 					width: 15%;
