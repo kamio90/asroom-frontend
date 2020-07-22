@@ -62,7 +62,6 @@ export default class SewageTreatmentSystemsComponent extends React.Component<any
         return (
             <div>
                 <HeroComponent data={this.state.heroCard} />
-                SewageTreatmentSystems
                 <ContactComponent data={this.state.contact} />
             </div>
         );

@@ -120,7 +120,7 @@
         background: transparent;
         display: flex;
         font-size: 1.8rem;
-        flex-basis: 30%;
+        // flex-basis: 30%;
         @media (min-width: 1025px) and (max-width: 1280px) {
 
         }
@@ -165,6 +165,16 @@
         @media (min-width: 320px) and (max-width: 767px) {
           width: 100%;
         }
+      }
+    }
+
+    &--right {
+      .infoCard__box__textHolder {
+        order: 1;
+      }
+      .infoCard__box__imgHolder {
+        display: flex;
+        justify-content: center;
       }
     }
   }

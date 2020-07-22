@@ -1,0 +1,156 @@
+@import './../global/mixins/flex';
+@import './../global/variables/variables';
+
+.partners {
+    @include flex-justify-align(center, center);
+    height: 100vh;
+    @media (min-width: 320px) and (max-width: 480px) {
+        width: 100%;
+    }
+
+    &__box {
+        @include flex-justify-align(center, center);
+        flex-basis: 80%;
+        // padding-left: 15rem;
+        @media (min-width: 1025px) and (max-width: 1280px) {
+            @include flex-wrap;
+            flex-direction: column-reverse;
+            padding: 0;
+            text-align: center;
+            flex-basis: 50%;
+        }
+        @media (min-width: 768px) and (max-width: 1024px) {
+            @include flex-wrap;
+            flex-direction: column-reverse;
+            padding: 0;
+            text-align: center;
+            flex-basis: 50%;
+        }
+        @media (min-width: 481px) and (max-width: 767px) {
+            @include flex-wrap;
+            flex-direction: column-reverse;
+            padding: 0;
+            text-align: center;
+            flex-basis: 50%;
+        }
+        @media (min-width: 481px) and (max-width: 767px) {
+            flex-basis: 65%;
+        }
+        @media (min-width: 320px) and (max-width: 480px) {
+            @include flex-wrap;
+            flex-direction: column-reverse;
+            padding: 0;
+            text-align: center;
+            flex-basis: 50%;
+            margin-top: 5rem;
+        }
+
+        &__textHolder {
+            @include flex-wrap;
+            flex-basis: 50%;
+            display: flex;
+            padding-left: 15rem;
+            @media (min-width: 320px) and (max-width: 1280px) {
+                flex-basis: 100%;
+                align-items: center;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            h2,
+            p,
+            button {
+                margin: 2rem 0;
+                @media (min-width: 481px) and (max-width: 767px) {
+                margin: 3rem 0;
+                }
+            }
+
+            &__title {
+                @include flex-basis(100%);
+                font-weight: 100;
+                text-transform: uppercase;
+                font-size: 4.5rem;
+            }
+
+            &__line {
+                height: 0.1rem;
+                width: 80%;
+                background-color: black;
+                position: relative;
+                @media (min-width: 320px) and (max-width: 1280px) {
+                width: 100%;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    height: 0.3rem;
+                    width: 14rem;
+                    background-color: $greenDark;
+                    top: -0.1rem;
+                    left: 0;
+                    @media (min-width: 320px) and (max-width: 1280px) {
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+
+                &--red {
+                    &::before {
+                        background-color: $redDark;
+                    }
+                }
+            }
+
+            &__description {
+                font-size: 1.6rem;
+                line-height: 3.2rem;
+                flex-basis: 80%;
+                @media (min-width: 320px) and (max-width: 1280px) {
+                flex-basis: 100%;
+                }
+            }
+        }
+
+        &__imgHolder {
+            flex-basis: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            @media (min-width: 1025px) and (max-width: 1280px) {
+              flex-basis: 100%;
+            }
+            @media (min-width: 481px) and (max-width: 767px) {
+              margin-bottom: 2rem;
+            }
+
+            &__image {
+                flex-basis: 16rem;
+                height: 16rem;
+                background-color: #D9D9D9;
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 11rem;
+                
+                &:nth-of-type(2),
+                &:nth-of-type(5) {
+                    margin-left: 11rem;
+                    margin-right: 11rem;
+                }
+
+                &:nth-of-type(4),
+                &:nth-of-type(5),
+                &:nth-of-type(6) {
+                    margin-bottom: 0;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

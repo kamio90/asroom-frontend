@@ -2,7 +2,11 @@ import React from "react";
 import HeroComponent from '../../components/hero';
 import InfoCardComponent from '../../components/infoCard';
 import mainImg from './../../img/pobrane.png';
+import mlLogo from './../../img/ML-SYSTEM-logo.png';
+import dLogo from './../../img/delfin-logo.png';
 import technologicalSolutions from './../../img/technological-solutions.png';
+import PartnersComponent from '../../components/partners';
+import SliderComponent from '../../components/slider';
 import ContactComponent from '../../components/contact';
 
 interface Props {
@@ -34,15 +38,14 @@ export default class MainPageComponent extends React.Component<Props, any> {
 				link: 'www.itroom.pl',
 			},
 		},
-		secondInfoCard: {
-			title: 'Nasi Partnerzy',
-			description:
-				'SmartPixel has been designing cutting-edge applications combining state-of-the-art technology with tactile systems to communicate information through unforgettable experiences since 2008.',
-			buttonText: 'skontaktuj się z nami',
-			img: technologicalSolutions,
-			alt: 'www.asroom.pl - fotowoltaika zdjecie wyrozniajace',
-			direction: '--right',
+		partners: {
+			title: 'Nasi partnerzy',
+			description: 'SmartPixel has been designing cutting-edge applications combining state-of-the-art technology with tactile systems to communicate information through unforgettable experiences since 2008.',
+			images: [mlLogo, dLogo, mlLogo, dLogo, mlLogo, dLogo],
 			colorName: '--red',
+		},
+		slider: {
+			images: [mlLogo, dLogo, mlLogo, dLogo, mlLogo, dLogo],
 		},
 		contact: {
 			title: 'skontaktuj się z nami',
@@ -75,7 +78,8 @@ export default class MainPageComponent extends React.Component<Props, any> {
             <div>
                 <HeroComponent data={this.state.heroCard} />
 				<InfoCardComponent data={this.state.firstInfoCard} />
-				<InfoCardComponent data={this.state.secondInfoCard} />
+				<PartnersComponent data={this.state.partners} />
+				<SliderComponent data={this.state.slider} />
                 <ContactComponent data={this.state.contact} />
             </div>
         );

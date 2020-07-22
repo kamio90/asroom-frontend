@@ -1,8 +1,12 @@
 import React from 'react';
 import InfoCardComponent from '../../components/infoCard';
 import fotowoltaika from './../../img/fotowoltaika1.png';
+import mlLogo from './../../img/ML-SYSTEM-logo.png';
+import dLogo from './../../img/delfin-logo.png';
 import mlimage from './../../img/CARPORT.jpg';
+import kogeneracyjne from './../../img/DSC00849.png';
 import HeroComponent from '../../components/hero';
+import SliderComponent from '../../components/slider';
 import ContactComponent from '../../components/contact';
 
 interface Props {
@@ -49,6 +53,29 @@ export default class RenewableEnergySourcesComponent extends React.Component<
 				link: 'www.itroom.pl',
 			},
 		},
+		secondInfoCard: {
+			title: 'ML System',
+			description:
+				'ML System to producent i dystrybutor paneli fotowoltaicznych. Na polskim rynku jest jednym z pionierów, którego zakresem działania jest energia fotowoltaiczna. Nowoczesne panele fotowoltaiczne służą do pozyskiwania energii słonecznej, dlatego ich popularna nazwa to panele słoneczne. ',
+			buttonText: 'strona partnera',
+			img: mlLogo,
+			alt: 'www.asroom.pl - fotowoltaika zdjęcie wyróżniające',
+			direction: '--right',
+			colorName: '--green',
+		},
+		slider: {
+			images: [mlLogo, dLogo, mlLogo, dLogo, mlLogo, dLogo],
+		},
+		thirdInfoCard: {
+			title: 'układy kogeneracyjne',
+			description:
+				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae felis quis lacus. Cras ut erat vitae enim efficitur porta vel a lorem. Curabitur tempus lacus ut odio vestibulum, nec vehicula nunc lobortis. Duis placerat, at fermentum tellus mollis a. Cras hendrerit felis neque, ut fermentum turpis porta vel. ',
+			buttonText: 'strona partnera',
+			img: kogeneracyjne,
+			alt: 'www.asroom.pl - układy kogeneracyjne zdjęcie wyróżniające',
+			direction: '--right',
+			colorName: '--green',
+		},
 		contact: {
 			title: 'skontaktuj się z nami',
 			buttonText: 'wyślij',
@@ -80,6 +107,9 @@ export default class RenewableEnergySourcesComponent extends React.Component<
 			<div>
 				<HeroComponent data={this.state.heroCard} />
 				<InfoCardComponent data={this.state.firstInfoCard} />
+				<InfoCardComponent data={this.state.secondInfoCard} />
+				<SliderComponent data={this.state.slider} />
+				<InfoCardComponent data={this.state.thirdInfoCard} />
 				<ContactComponent data={this.state.contact} />
 			</div>
 		);
