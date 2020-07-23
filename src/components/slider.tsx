@@ -27,6 +27,14 @@ export default class SliderComponent extends React.Component<Props, any> {
             centerMode: true,
             variableWidth: true,
             centerPadding: '0',
+            responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+            ]
         }
 
 		return (

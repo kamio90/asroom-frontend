@@ -1,7 +1,15 @@
 import React from "react";
 import HeroComponent from '../../components/hero';
-import slupskImg from './../../img/os_slupsk.png';
+import InfoCardComponent from '../../components/infoCard';
+import SliderComponent from '../../components/slider';
 import ContactComponent from '../../components/contact';
+
+import slupskImg from './../../img/os_slupsk.png';
+import mlLogo from './../../img/ML-SYSTEM-logo.png';
+import dLogo from './../../img/delfin-logo.png';
+import dLargeLogo from './../../img/logo_delfin.png';
+import dBLogo from './../../img/Delfin_blue_logo.png';
+import separatory from './../../img/sep-weglo.png';
 
 interface Props {
     changePathName: (param: string) => void;
@@ -9,16 +17,6 @@ interface Props {
 
 export default class SewageTreatmentSystemsComponent extends React.Component<any, any> {
     state = {
-		firstInfoCard: {
-			title: 'ASROOM ZAPEWNIA najlepsze rozwiązania TECHNOLOGICZNE',
-			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae felis quis lacus. Cras ut erat vitae enim efficitur porta vel a lorem. Curabitur tempus lacus ut odio vestibulum, nec vehicula nunc lobortis. Duis placerat, at fermentum tellus mollis a. Cras hendrerit felis neque, ut fermentum turpis porta vel. ',
-			buttonText: 'skontaktuj się z nami',
-			// img: technologicalSolutions,
-			alt: 'www.asroom.pl - zdjecie wyrozniajace',
-			direction: '',
-			colorName: '--blue',
-		},
 		heroCard: {
 			title: 'Systemy oczyszczania ścieków',
 			description:
@@ -31,6 +29,39 @@ export default class SewageTreatmentSystemsComponent extends React.Component<any
 				title: 'itroom',
 				link: 'www.itroom.pl',
 			},
+		},
+		firstInfoCard: {
+			title: 'Sposoby oczyszczania',
+			description:
+				'Technologia MBBR (Moving Bed Biofilm Reactor), która polega na wykorzystaniu złoża biologicznego ruchomego (fluidalnego) wspomaganego osadem czynnym. Technologia osadu czynnego, polegająca na wykorzystaniu osadu czynnego znajdującego się w komorze napowietrzania i swobodnie zawieszonego w ściekach.',
+			buttonText: 'sprawdź',
+			img: dBLogo,
+			alt: 'www.asroom.pl - Delfin sp. z o. o. zdjęcie wyrożniające',
+			direction: '',
+			colorName: '--blue',
+		},
+		secondInfoCard: {
+			title: 'DELFIN SP. z o. o.',
+			description:
+				'Producent przydomowych oczyszczalni ścieków, separatorów węglowodorów, separatorów tłuszczów i skrobi, ekologicznych zbiorników na wodę deszczową oraz akcesoriów do systemów oczyszczania ścieków.',
+			buttonText: 'skontaktuj się z nami',
+			img: dLargeLogo,
+			alt: 'www.asroom.pl - Delfin sp. z o. o. zdjęcie wyrożniające',
+			direction: '--right',
+			colorName: '--blue',
+		},
+		slider: {
+			images: [mlLogo, dLogo, mlLogo, dLogo, mlLogo, dLogo],
+		},
+		thirdInfoCard: {
+			title: 'hybrydowe separatory węglowodorów',
+			description:
+				'Separator koalescencyjny hybrydowy, wg wynalazku, ma postać zbiornika z wyprowadzeniami dla wlotu i wylotu cieczy, zawierający komorę oczyszczania z co najmniej jednym filtrem koalescencyjnym, charakteryzującym się tym, że na drodze flotacyjnego przepływu cieczy do filtra koalescencyjnego usytuowane jest co najmniej jedno urządzenie przepływowe.',
+			buttonText: 'dowiedz się więcej',
+			img: separatory,
+			alt: 'www.asroom.pl - Delfin sp. z o. o. zdjęcie wyrożniające',
+			direction: '--right',
+			colorName: '--blue',
 		},
 		contact: {
 			title: 'skontaktuj się z nami',
@@ -62,6 +93,10 @@ export default class SewageTreatmentSystemsComponent extends React.Component<any
         return (
             <div>
                 <HeroComponent data={this.state.heroCard} />
+				<InfoCardComponent data={this.state.firstInfoCard} />
+				<InfoCardComponent data={this.state.secondInfoCard} />
+				<SliderComponent data={this.state.slider} />
+				<InfoCardComponent data={this.state.thirdInfoCard} />
                 <ContactComponent data={this.state.contact} />
             </div>
         );

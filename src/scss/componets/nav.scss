@@ -16,6 +16,9 @@
   @media (min-width: 768px) and (max-width: 1024px) {
     width: 50%;
   }
+  @media all and (max-width: 768px) {
+    width: 40%;
+  }
   @media (min-width: 320px) and (max-width: 480px) {
     width: 100%;
   }
