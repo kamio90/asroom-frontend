@@ -22,10 +22,12 @@ export default class SliderComponent extends React.Component<Props, any> {
             arrows: false,
             autoplay: true,
             speed: 1000,
+            autoplaySpeed: 2000,
             slidesToShow: 3,
             slidesToScroll: 1,
             centerMode: true,
             variableWidth: true,
+            pauseOnHover: false,
             centerPadding: '0',
             responsive: [
                 {

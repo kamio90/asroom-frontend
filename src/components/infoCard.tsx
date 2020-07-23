@@ -11,6 +11,7 @@ interface Props {
 		alt: string;
 		direction: string;
 		colorName: string;
+		link ? : string;
 	};
 }
 
@@ -24,6 +25,7 @@ export default class InfoCardComponent extends React.Component<Props, any> {
 			direction, //--left
 			img,
 			title,
+			link,
 		} = this.props.data;
 
 		return (
@@ -40,7 +42,7 @@ export default class InfoCardComponent extends React.Component<Props, any> {
 							{description}
 						</p>
 						<button className={'infoCard__box__textHolder__button'}>
-							{buttonText}
+							{this.props.data.link ? <a href={`${link}`}>{buttonText}</a> : `${buttonText}`}
 							<span className={`infoCard__box__textHolder__button__line infoCard__box__textHolder__button__line${colorName}`} />
 						</button>
 					</div>

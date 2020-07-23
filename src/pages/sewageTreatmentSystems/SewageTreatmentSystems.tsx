@@ -49,6 +49,7 @@ export default class SewageTreatmentSystemsComponent extends React.Component<any
 			alt: 'www.asroom.pl - Delfin sp. z o. o. zdjęcie wyrożniające',
 			direction: '--right',
 			colorName: '--blue',
+			link: 'http://www.delfin-polska.pl/',
 		},
 		slider: {
 			images: [mlLogo, dLogo, mlLogo, dLogo, mlLogo, dLogo],

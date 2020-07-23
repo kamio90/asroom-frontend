@@ -53,8 +53,8 @@ export default class HeroComponent extends React.Component<Props, State> {
                             <span className={"hero__container__textHolder__button__line"}/>
                             <div
                                 className={`hero__container__textHolder__button__modal hero__container__textHolder__button__modal${this.state.isModalActive ? '--active' : ''}`}>
-                                {modal.title}
-                                {modal.link}
+                                <p>{modal.title}</p>
+                                <a>{modal.link}</a>
                             </div>
                         </button>
                     </div>

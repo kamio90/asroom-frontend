@@ -62,6 +62,7 @@ export default class RenewableEnergySourcesComponent extends React.Component<
 			alt: 'www.asroom.pl - fotowoltaika zdjęcie wyróżniające',
 			direction: '--right',
 			colorName: '--green',
+			link: 'https://mlsystem.pl/',
 		},
 		slider: {
 			images: [mlLogo, dLogo, mlLogo, dLogo, mlLogo, dLogo],
@@ -109,7 +110,7 @@ export default class RenewableEnergySourcesComponent extends React.Component<
 				<InfoCardComponent data={this.state.firstInfoCard} />
 				<InfoCardComponent data={this.state.secondInfoCard} />
 				<SliderComponent data={this.state.slider} />
-				<InfoCardComponent data={this.state.thirdInfoCard} />
+				{/* <InfoCardComponent data={this.state.thirdInfoCard} /> */}
 				<ContactComponent data={this.state.contact} />
 			</div>
 		);
