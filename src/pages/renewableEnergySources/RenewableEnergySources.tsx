@@ -1,13 +1,21 @@
 import React from 'react';
 import InfoCardComponent from '../../components/infoCard';
-import fotowoltaika from './../../img/fotowoltaika1.png';
-import mlLogo from './../../img/ML-SYSTEM-logo.png';
-import dLogo from './../../img/delfin-logo.png';
-import mlimage from './../../img/CARPORT.jpg';
-import kogeneracyjne from './../../img/DSC00849.png';
 import HeroComponent from '../../components/hero';
 import SliderComponent from '../../components/slider';
 import ContactComponent from '../../components/contact';
+
+import fotowoltaika from './../../img/fotowoltaika1.png';
+import mlLogo from './../../img/ML-SYSTEM-logo.png';
+import mlLogoBig from './../../img/ml-logo-big.png';
+import dLogo from './../../img/delfin-logo.png';
+import mlimage from './../../img/CARPORT.jpg';
+import kogeneracyjne from './../../img/DSC00849.png';
+import slide1 from './../../img/IMG_1876.png';
+import slide2 from './../../img/domek1.png';
+import slide3 from './../../img/domek2.png';
+import slide4 from './../../img/DSC00421.png';
+import slide5 from './../../img/IMG_1842.png';
+import slide6 from './../../img/DJI_0044.png';
 
 interface Props {
 	changePathName: (param: string) => void;
@@ -58,14 +66,14 @@ export default class RenewableEnergySourcesComponent extends React.Component<
 			description:
 				'ML System to producent i dystrybutor paneli fotowoltaicznych. Na polskim rynku jest jednym z pionierów, którego zakresem działania jest energia fotowoltaiczna. Nowoczesne panele fotowoltaiczne służą do pozyskiwania energii słonecznej, dlatego ich popularna nazwa to panele słoneczne. ',
 			buttonText: 'strona partnera',
-			img: mlLogo,
+			img: mlLogoBig,
 			alt: 'www.asroom.pl - fotowoltaika zdjęcie wyróżniające',
 			direction: '--right',
 			colorName: '--green',
 			link: 'https://mlsystem.pl/',
 		},
 		slider: {
-			images: [mlLogo, dLogo, mlLogo, dLogo, mlLogo, dLogo],
+			images: [slide1, slide2, slide3, slide4, slide5, slide6],
 		},
 		thirdInfoCard: {
 			title: 'układy kogeneracyjne',

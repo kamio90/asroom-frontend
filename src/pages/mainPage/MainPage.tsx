@@ -1,13 +1,20 @@
 import React from "react";
 import HeroComponent from '../../components/hero';
 import InfoCardComponent from '../../components/infoCard';
+import PartnersComponent from '../../components/partners';
+import SliderComponent from '../../components/slider';
+import ContactComponent from '../../components/contact';
+
 import mainImg from './../../img/pobrane.png';
 import mlLogo from './../../img/ML-SYSTEM-logo.png';
 import dLogo from './../../img/delfin-logo.png';
 import technologicalSolutions from './../../img/technological-solutions.png';
-import PartnersComponent from '../../components/partners';
-import SliderComponent from '../../components/slider';
-import ContactComponent from '../../components/contact';
+import slide1 from './../../img/IMG_1876.png';
+import slide2 from './../../img/domek1.png';
+import slide3 from './../../img/domek2.png';
+import slide4 from './../../img/DSC00421.png';
+import slide5 from './../../img/IMG_1842.png';
+import slide6 from './../../img/DJI_0044.png';
 
 interface Props {
     changePathName: (param: string) => void;
@@ -45,7 +52,7 @@ export default class MainPageComponent extends React.Component<Props, any> {
 			colorName: '--red',
 		},
 		slider: {
-			images: [mlLogo, dLogo, mlLogo, dLogo, mlLogo, dLogo],
+			images: [slide1, slide2, slide3, slide4, slide5, slide6],
 		},
 		contact: {
 			title: 'skontaktuj się z nami',

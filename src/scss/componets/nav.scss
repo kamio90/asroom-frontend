@@ -289,7 +289,7 @@
     &--green {
       .topPanel__pageNavigation__link {
         &:first-of-type::after {
-          background-color: #19440e;
+          background-color: $greenDark;
         }
       }
     }

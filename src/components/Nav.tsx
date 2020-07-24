@@ -129,11 +129,13 @@ export default class NavComponent extends React.Component<Props, State> {
                                     key={index}
                                     href={value.href}
                                     text={value.text}
-                                    actionClose={() =>
+                                    actionClose={() => {
                                         this.setState({
                                             isMenuOpen: !this.state
                                                 .pagePathName,
-                                        })
+                                        });
+                                        window.scrollTo({ behavior: 'smooth', top: 0, left: 0});
+                                        }
                                     }
                                 />
                             ))}
@@ -207,7 +209,7 @@ export default class NavComponent extends React.Component<Props, State> {
                             changePathName={this.changePathName}
                         />
                     </Route>
-                    <Route
+                    {/* <Route
                         exact
                         path={'/modernizacja'}
                         component={ModernizationComponent}
@@ -215,8 +217,8 @@ export default class NavComponent extends React.Component<Props, State> {
                         <ModernizationComponent
                             changePathName={this.changePathName}
                         />
-                    </Route>
-                    <Route
+                    </Route> */}
+                    {/* <Route
                         exact
                         path={'/panelhandlowy'}
                         component={TradePanelComponent}
@@ -224,7 +226,7 @@ export default class NavComponent extends React.Component<Props, State> {
                         <TradePanelComponent
                             changePathName={this.changePathName}
                         />
-                    </Route>
+                    </Route> */}
                     <Route
                         exact
                         path={'/renewableenergysources'}
@@ -276,7 +278,9 @@ export class NavComponentPageLink extends React.Component<Props3, any> {
     render() {
         const {href, text} = this.props;
         return (
-            <Link to={href} className={`topPanel__pageNavigation__link`}>
+            <Link to={href} className={`topPanel__pageNavigation__link`} onClick={() => {
+                window.scrollTo({ behavior: 'smooth', top: window.document.body.offsetHeight - window.innerHeight, left: 0});
+            }} >
                 {text}
             </Link>
         );

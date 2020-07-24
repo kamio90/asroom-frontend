@@ -10,6 +10,12 @@ import dLogo from './../../img/delfin-logo.png';
 import dLargeLogo from './../../img/logo_delfin.png';
 import dBLogo from './../../img/Delfin_blue_logo.png';
 import separatory from './../../img/sep-weglo.png';
+import slide1 from './../../img/IMG_1876.png';
+import slide2 from './../../img/domek1.png';
+import slide3 from './../../img/domek2.png';
+import slide4 from './../../img/DSC00421.png';
+import slide5 from './../../img/IMG_1842.png';
+import slide6 from './../../img/DJI_0044.png';
 
 interface Props {
     changePathName: (param: string) => void;
@@ -52,7 +58,7 @@ export default class SewageTreatmentSystemsComponent extends React.Component<any
 			link: 'http://www.delfin-polska.pl/',
 		},
 		slider: {
-			images: [mlLogo, dLogo, mlLogo, dLogo, mlLogo, dLogo],
+			images: [slide1, slide2, slide3, slide4, slide5, slide6],
 		},
 		thirdInfoCard: {
 			title: 'hybrydowe separatory węglowodorów',

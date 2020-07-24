@@ -72,14 +72,14 @@ class App extends React.Component<any, State> {
 						href: '/systemyoczyszczaniasciekow',
 						text: 'Systemy Oczyszczania Sciekow',
 					},
-					{
-						href: '/modernizacja',
-						text: 'Modernizacja',
-					},
-					{
-						href: '/panelhandlowy',
-						text: 'Panel Handlowy',
-					},
+					// {
+					// 	href: '/modernizacja',
+					// 	text: 'Modernizacja',
+					// },
+					// {
+					// 	href: '/panelhandlowy',
+					// 	text: 'Panel Handlowy',
+					// },
 				],
 				Logo: {
 					src: ASRoomLogo,
@@ -139,14 +139,14 @@ class App extends React.Component<any, State> {
 						href: '/sewagetreatmentsystems',
 						text: 'Sewage Treatment Systems',
 					},
-					{
-						href: '/modernization',
-						text: 'Modernization',
-					},
-					{
-						href: '/tradepanel',
-						text: 'Trade Panel',
-					},
+					// {
+					// 	href: '/modernization',
+					// 	text: 'Modernization',
+					// },
+					// {
+					// 	href: '/tradepanel',
+					// 	text: 'Trade Panel',
+					// },
 				],
 				Logo: {
 					src: ASRoomLogo,
@@ -199,7 +199,9 @@ class App extends React.Component<any, State> {
 
 	render() {
 		return (
-			<div className='App'>
+			<div className='App' onScroll={() => {
+				console.log('123');
+			}}>
 				<NavComponent
 					Nav={
 						this.state.isPL ? this.state.PL.Nav : this.state.EN.Nav

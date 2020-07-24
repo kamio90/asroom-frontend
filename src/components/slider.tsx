@@ -27,6 +27,7 @@ export default class SliderComponent extends React.Component<Props, any> {
             slidesToScroll: 1,
             centerMode: true,
             variableWidth: true,
+            variableHeight: true,
             pauseOnHover: false,
             centerPadding: '0',
             responsive: [

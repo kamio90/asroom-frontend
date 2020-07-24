@@ -36,7 +36,7 @@ export default class ContactComponent extends React.Component<Props, any> {
 		} = this.props.data;
 
 		return (
-			<section className='footerContact'>
+			<section className='footerContact' id="footer">
 				<div className='footerContact__box'>
 					<div className='footerContact__box__form'>
 						<h2 className='footerContact__box__form__title'>
