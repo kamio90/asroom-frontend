@@ -24,7 +24,9 @@ interface Props {
 export default class SewageTreatmentSystemsComponent extends React.Component<any, any> {
     state = {
 		heroCard: {
-			title: 'Systemy oczyszczania ścieków',
+			title: 'Systemy ',
+			titleSpecial: 'oczyszczania ',
+			titleContinue: 'ścieków',
 			description:
 				'Skuteczniej niż tradycyjne oczyszczalnie. Linia nowoczesnych jednozbiornikowych oczyszczalni przydomowych. Wysoki stopień oczyszczania.',
 			buttonText: 'dowiedz się więcej',

@@ -211,7 +211,9 @@
     }
 
     &__image {
-      @include flex-basis(70%);
+      width: 100px;
+      height: auto;
+      margin-left: 50px;
       @media (min-width: 320px) and (max-width: 480px) {
         height: auto;
         width: 23rem;
@@ -221,7 +223,8 @@
   }
 
   &__pageNavigation {
-    @include flex-basis(20%);
+    //@include flex-basis(20%);
+    padding-right: 4rem;
     position: relative;
     @media (min-width: 320px) and (max-width: 480px) {
       flex-basis: 100%;

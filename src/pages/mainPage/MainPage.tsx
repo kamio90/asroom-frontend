@@ -5,7 +5,7 @@ import PartnersComponent from '../../components/partners';
 import SliderComponent from '../../components/slider';
 import ContactComponent from '../../components/contact';
 
-import mainImg from './../../img/pobrane.png';
+import mainImg from './../../img/pobrane-2.png';
 import mlLogo from './../../img/ML-SYSTEM-logo.png';
 import dLogo from './../../img/delfin-logo.png';
 import technologicalSolutions from './../../img/technological-solutions.png';
@@ -33,7 +33,9 @@ export default class MainPageComponent extends React.Component<Props, any> {
 			colorName: '--red',
 		},
 		heroCard: {
-			title: 'asroom',
+			title: '',
+			titleSpecial: 'as',
+			titleContinue: 'room',
 			description:
 				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae felis quis lacus. Cras ut erat vitae enim efficitur porta vel a lorem. Curabitur tempus lacus ut odio vestibulum,',
 			buttonText: 'dowiedz się więcej',

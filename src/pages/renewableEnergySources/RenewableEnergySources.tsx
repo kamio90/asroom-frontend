@@ -23,7 +23,9 @@ interface Props {
 
 interface State {
 	firstInfoCard: {
-		title: string;
+		title ?: string;
+		titleSpecial ?: string;
+		titleContinue ?: string;
 		description: string;
 		buttonText: string;
 		img: string;
@@ -49,7 +51,9 @@ export default class RenewableEnergySourcesComponent extends React.Component<
 			colorName: '--green',
 		},
 		heroCard: {
-			title: 'odnawialne źródła energii',
+			title: 'odnawialne źródła',
+			titleSpecial: ' energii ',
+			titleContinue: '',
 			description:
 				'Nowoczesne rozwiązania, pozwalające na całkowite wyeliminowanie tradycyjnych metod zarządzania energią.',
 			buttonText: 'dowiedz się więcej',

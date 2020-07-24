@@ -1,8 +1,10 @@
 import React from 'react';
 import NavComponent from './components/Nav';
-import ASRoomLogo from './img/ASRoomLogo.png';
+import ASRoomLogo from './img/logo-asroom.png';
+// import ASRoomLogo from './img/ASRoomLogo.png';
 
 interface State {
+	// height: any;
 	isPL: boolean;
 	PL: {
 		Nav: {
@@ -56,6 +58,7 @@ interface State {
 
 class App extends React.Component<any, State> {
 	state = {
+		// height: 0,
 		isPL: true,
 		PL: {
 			Nav: {
@@ -197,11 +200,41 @@ class App extends React.Component<any, State> {
 		this.setState({ isPL: !this.state.isPL });
 	};
 
+	componentDidMount() {
+		// const distanceFor = document.getElementById('footer')?.offsetHeight;
+
+		let distance = 0;
+
+		// this.setState({height: distanceFor});
+		window.onbeforeunload = function () {
+			window.scrollTo(0, 0);
+		}
+
+		window.addEventListener('mousewheel', (e: any) => {
+			// if(distance >= 0 &&  window.scrollY <= window.document.body.offsetHeight) {
+			// 	// console.log(window.scrollY);
+			// 	if(e.wheelDelta < 0) {
+			// 		distance += window.innerHeight;
+			// 		window.scrollTo({ behavior: 'smooth', top: distance, left: 0});
+			// 	} else {
+			// 		distance -= window.innerHeight;
+			// 		window.scrollTo({ behavior: 'smooth', top: distance, left: 0});
+			// 	}
+			// }
+
+			// if(distance >= 0 && e.wheelDelta < 0) {
+			// 	distance += window.innerHeight;
+			// 	window.scrollTo({ behavior: 'smooth', top: distance, left: 0});
+			// } else if (distance <= window.document.body.offsetHeight) {
+			// 	distance -= window.innerHeight;
+			// 		window.scrollTo({ behavior: 'smooth', top: distance, left: 0});
+			// }
+		})
+	}
+
 	render() {
 		return (
-			<div className='App' onScroll={() => {
-				console.log('123');
-			}}>
+			<div className='App'>
 				<NavComponent
 					Nav={
 						this.state.isPL ? this.state.PL.Nav : this.state.EN.Nav

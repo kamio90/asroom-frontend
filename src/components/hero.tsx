@@ -3,7 +3,9 @@ import '../scss/componets/hero.scss';
 
 interface Props {
     data: {
-        title: string;
+        title ?: string;
+        titleSpecial ?: string;
+        titleContinue ?: string;
         description: string;
         buttonText: string;
         img: string;
@@ -29,6 +31,8 @@ export default class HeroComponent extends React.Component<Props, State> {
     render() {
         const {
             title,
+            titleSpecial,
+            titleContinue,
             description,
             buttonText,
             img,
@@ -41,22 +45,11 @@ export default class HeroComponent extends React.Component<Props, State> {
                 <div className={"hero__container"}>
                     <div className={"hero__container__textHolder"}>
                         <h2 className={"hero__container__textHolder__title"}>
-                            {title}
+                            {title}<span className={`special special${colorName}`}>{titleSpecial}</span>{titleContinue}
                         </h2>
                         <p className={"hero__container__textHolder__description"}>
                             {description}
                         </p>
-                        <button
-                            onClick={() => this.setState({isModalActive: !this.state.isModalActive})}
-                            className={`hero__container__textHolder__button hero__container__textHolder__button${colorName}`}>
-                            {buttonText}
-                            <span className={"hero__container__textHolder__button__line"}/>
-                            <div
-                                className={`hero__container__textHolder__button__modal hero__container__textHolder__button__modal${this.state.isModalActive ? '--active' : ''}`}>
-                                <p>{modal.title}</p>
-                                <a>{modal.link}</a>
-                            </div>
-                        </button>
                     </div>
                     <div className={"hero__container__imageHolder"}>
                         <img src={img} alt={alt}/>
