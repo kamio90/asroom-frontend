@@ -70,7 +70,7 @@ export default class RenewableEnergySourcesComponent extends React.Component<
 			description:
 				'ML System to producent i dystrybutor paneli fotowoltaicznych. Na polskim rynku jest jednym z pionierów, którego zakresem działania jest energia fotowoltaiczna. Nowoczesne panele fotowoltaiczne służą do pozyskiwania energii słonecznej, dlatego ich popularna nazwa to panele słoneczne. ',
 			buttonText: 'strona partnera',
-			img: mlLogoBig,
+			img: mlLogo,
 			alt: 'www.asroom.pl - fotowoltaika zdjęcie wyróżniające',
 			direction: '--right',
 			colorName: '--green',
