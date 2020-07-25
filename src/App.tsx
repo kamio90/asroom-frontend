@@ -212,7 +212,8 @@ class App extends React.Component<any, State> {
 
 		window.addEventListener('mousewheel', (e: any) => {
 			// if(distance >= 0 &&  window.scrollY <= window.document.body.offsetHeight) {
-			// 	// console.log(window.scrollY);
+			// 	console.log(distance);
+			// 	console.log(window.innerHeight);
 			// 	if(e.wheelDelta < 0) {
 			// 		distance += window.innerHeight;
 			// 		window.scrollTo({ behavior: 'smooth', top: distance, left: 0});
@@ -221,13 +222,14 @@ class App extends React.Component<any, State> {
 			// 		window.scrollTo({ behavior: 'smooth', top: distance, left: 0});
 			// 	}
 			// }
+			// console.log(window.document.body.offsetHeight);
 
 			// if(distance >= 0 && e.wheelDelta < 0) {
 			// 	distance += window.innerHeight;
 			// 	window.scrollTo({ behavior: 'smooth', top: distance, left: 0});
 			// } else if (distance <= window.document.body.offsetHeight) {
 			// 	distance -= window.innerHeight;
-			// 		window.scrollTo({ behavior: 'smooth', top: distance, left: 0});
+			// 	window.scrollTo({ behavior: 'smooth', top: distance, left: 0});
 			// }
 		})
 	}

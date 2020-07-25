@@ -63,8 +63,10 @@ export default class NavComponent extends React.Component<Props, State> {
     render() {
         const {mainLink, Logo, pageLink, downPanel} = this.props.Nav;
         const {isPL, changeNation} = this.props;
+        
 
         return (
+            
             <Router>
                 <div className={'topPanel'}>
                     <div className={'topPanel__iconHolder'}>

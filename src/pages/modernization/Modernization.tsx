@@ -24,6 +24,7 @@ export default class ModernizationComponent extends React.Component<Props, any> 
 			alt: 'www.asroom.pl - zdjecie wyrozniajace',
 			direction: '',
 			colorName: '--red',
+			images: [technologicalSolutions],
 		},
 		secondInfoCard: {
 			title: 'lorem ipsum',
@@ -34,6 +35,7 @@ export default class ModernizationComponent extends React.Component<Props, any> 
 			alt: 'www.asroom.pl - fotowoltaika zdjęcie wyróżniające',
 			direction: '--right',
 			colorName: '--red',
+			images: [mlLogo],
 		},
 		heroCard: {
 			title: 'Modernizacja',

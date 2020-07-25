@@ -32,6 +32,7 @@ interface State {
 		alt: string;
 		direction: string;
 		colorName: string;
+		images: string[];
 	};
 }
 
@@ -49,6 +50,8 @@ export default class RenewableEnergySourcesComponent extends React.Component<
 			alt: 'www.asroom.pl - fotowoltaika zdjecie wyrozniajace',
 			direction: '',
 			colorName: '--green',
+			link: 'https://mlsystem.pl/klient-indywidualny/moduly-pv-3/',
+			images: [fotowoltaika],
 		},
 		heroCard: {
 			title: 'odnawialne źródła',
@@ -75,6 +78,7 @@ export default class RenewableEnergySourcesComponent extends React.Component<
 			direction: '--right',
 			colorName: '--green',
 			link: 'https://mlsystem.pl/',
+			images: [mlLogo],
 		},
 		slider: {
 			images: [slide1, slide2, slide3, slide4, slide5, slide6],
@@ -88,6 +92,7 @@ export default class RenewableEnergySourcesComponent extends React.Component<
 			alt: 'www.asroom.pl - układy kogeneracyjne zdjęcie wyróżniające',
 			direction: '--right',
 			colorName: '--green',
+			images: [kogeneracyjne],
 		},
 		contact: {
 			title: 'skontaktuj się z nami',
@@ -116,13 +121,13 @@ export default class RenewableEnergySourcesComponent extends React.Component<
 	}
 
 	render() {
+		
 		return (
 			<div>
 				<HeroComponent data={this.state.heroCard} />
 				<InfoCardComponent data={this.state.firstInfoCard} />
 				<InfoCardComponent data={this.state.secondInfoCard} />
 				<SliderComponent data={this.state.slider} />
-				{/* <InfoCardComponent data={this.state.thirdInfoCard} /> */}
 				<ContactComponent data={this.state.contact} />
 			</div>
 		);

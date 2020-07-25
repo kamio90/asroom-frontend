@@ -8,6 +8,7 @@ import ContactComponent from '../../components/contact';
 import mainImg from './../../img/pobrane-2.png';
 import mlLogo from './../../img/ML-SYSTEM-logo.png';
 import dLogo from './../../img/delfin-logo.png';
+import dBLogo from './../../img/Delfin_blue_logo.png';
 import technologicalSolutions from './../../img/technological-solutions.png';
 import slide1 from './../../img/IMG_1876.png';
 import slide2 from './../../img/domek1.png';
@@ -31,6 +32,7 @@ export default class MainPageComponent extends React.Component<Props, any> {
 			alt: 'www.asroom.pl - zdjecie wyrozniajace',
 			direction: '',
 			colorName: '--red',
+			images: [technologicalSolutions,dBLogo],
 		},
 		heroCard: {
 			title: '',
@@ -79,7 +81,7 @@ export default class MainPageComponent extends React.Component<Props, any> {
     };
     
     componentDidMount() {
-        this.props.changePathName(window.location.pathname);
+		this.props.changePathName(window.location.pathname);
     }
 
     render() {

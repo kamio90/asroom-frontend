@@ -4,6 +4,7 @@
 .infoCard {
   @include flex;
   @include flex-justify-align(center, center);
+  flex-wrap: wrap;
   height: 100vh;
 
   @media all and (max-width: 1280px) {
@@ -18,13 +19,17 @@
   &__box {
     @include flex-justify-align(center, center);
     flex-basis: 80%;
+    width: 50%;
     padding-left: 15rem;
+    flex-wrap: wrap;
+
     @media (min-width: 1025px) and (max-width: 1280px) {
       @include flex-wrap;
       flex-direction: column-reverse;
       padding: 0;
       text-align: center;
       flex-basis: 50%;
+      width: 50%;
       margin-bottom: 10rem;
     }
     @media (min-width: 768px) and (max-width: 1024px) {
@@ -33,6 +38,7 @@
       padding: 0;
       text-align: center;
       flex-basis: 50%;
+      width: 50%;
     }
     @media (min-width: 481px) and (max-width: 767px) {
       @include flex-wrap;
@@ -40,6 +46,7 @@
       padding: 0;
       text-align: center;
       flex-basis: 50%;
+      width: 50%;
     }
     @media (min-width: 481px) and (max-width: 767px) {
       flex-basis: 65%;
@@ -71,6 +78,24 @@
         margin: 2rem 0;
         @media (min-width: 481px) and (max-width: 767px) {
           margin: 3rem 0;
+        }
+      }
+
+      &__button {
+        transition: .4s;
+        border-style: solid;
+        cursor: pointer;
+
+        &--green {
+          border-color: $greenDark;
+        }
+
+        &--red {
+          border-color: $redDark;
+        }
+
+        &--blue {
+          border-color: $blueDark;
         }
       }
 
@@ -137,10 +162,49 @@
         background: transparent;
         display: flex;
         font-size: 1.8rem;
+        transition: .4s;
+
+        &--blue {
+          &:hover {
+            background-color: $blueDark;
+            border-color: $blueDark;
+          }
+        }
+
+        &--red {
+          &:hover {
+            background-color: $redDark;
+            border-color: $redDark;
+          }
+        }
+
+        &--green {
+          &:hover {
+            background-color: $greenDark;
+            border-color: $greenDark;
+          }
+        }
+
+        &:hover {
+          color: #fff;
+          a {
+            color: #fff;
+          }
+
+          .infoCard__box__textHolder__button__line {
+            background-color: #fff;
+          }
+
+          .infoCard__box__textHolder__button__line::after {
+            background-color: #fff;
+          }
+        }
 
         a {
           font-size: 1.8rem;
           text-transform: uppercase;
+          transition: .4s;
+          color: #000;
         }
         // flex-basis: 30%;
         @media (min-width: 1025px) and (max-width: 1280px) {
@@ -154,8 +218,10 @@
           background-color: black;
           margin: 0.8rem 0 0 2rem;
           position: relative;
+          transition: .4s;
 
           &::after {
+            transition: .4s;
             content: '';
             position: absolute;
             height: 0.3rem;
@@ -182,7 +248,11 @@
 
     &__imgHolder {
       flex-basis: 50%;
+      width: 50%;
+      height: 400px;
+      position: relative;
       @media (min-width: 1025px) and (max-width: 1280px) {
+        height: 300px;
         flex-basis: 100%;
       }
       @media (min-width: 481px) and (max-width: 767px) {
@@ -193,6 +263,15 @@
       }
 
       img {
+        // width: 90%;
+        // height: 90%;
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        object-fit: contain;
+        height: 400px;
+
         @media all and (max-width: 1366px) {
           width: 80%;
         }
@@ -219,3 +298,42 @@
     }
   }
 }
+
+// .infoCard__box:not(.infoCard__box--right) {
+//   img {
+//     transition: 1s;
+//     &.faded {
+//       opacity: 0;
+//     }
+
+//     &.active {
+//       opacity: 1;
+//     }
+//   }
+// }
+
+// @keyframes fadeIn {
+//   0% {
+//     opacity: 0;
+//   }
+//   50% {
+//     opacity: 1;
+//   }
+
+//   100% {
+//     opacity: 0;
+//   }
+// }
+
+// @keyframes fadeOut {
+//   0% {
+//     opacity: 1;
+//   }
+//   50% {
+//     opacity: 0;
+//   }
+
+//   100% {
+//     opacity: 1;
+//   }
+// }

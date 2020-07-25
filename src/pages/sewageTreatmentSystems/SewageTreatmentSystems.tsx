@@ -4,7 +4,9 @@ import InfoCardComponent from '../../components/infoCard';
 import SliderComponent from '../../components/slider';
 import ContactComponent from '../../components/contact';
 
-import slupskImg from './../../img/os_slupsk.png';
+import slupskImg from './../../img/water-management-4.jpg';
+import technologicalSolutions from './../../img/technological-solutions.png';
+import oczyszczacz from './../../img/DELFIN_RAIN_0_karta_tech_11.jpg';
 import mlLogo from './../../img/ML-SYSTEM-logo.png';
 import dLogo from './../../img/delfin-logo.png';
 import dLargeLogo from './../../img/logo_delfin.png';
@@ -39,25 +41,28 @@ export default class SewageTreatmentSystemsComponent extends React.Component<any
 			},
 		},
 		firstInfoCard: {
-			title: 'Sposoby oczyszczania',
+			title: 'Zbiorniki na wodę deszczową',
 			description:
-				'Technologia MBBR (Moving Bed Biofilm Reactor), która polega na wykorzystaniu złoża biologicznego ruchomego (fluidalnego) wspomaganego osadem czynnym. Technologia osadu czynnego, polegająca na wykorzystaniu osadu czynnego znajdującego się w komorze napowietrzania i swobodnie zawieszonego w ściekach.',
+				'Zbiorniki na wodę deszczową DELFIN RAIN pomagają zmniejszyć zużycie wody w przeciętnym gospodarstwie domowym do 30%. To niebagatelna oszczędność zważywszy na zwiększające się ceny wody, wynikające z rosnących kosztów jej wydobycia i uzdatnienia.',
 			buttonText: 'sprawdź',
 			img: dBLogo,
 			alt: 'www.asroom.pl - Delfin sp. z o. o. zdjęcie wyrożniające',
 			direction: '',
 			colorName: '--blue',
+			images: [dBLogo, oczyszczacz],
+			link: 'http://www.delfin-polska.pl/oferta/zbiorniki-na-wode-deszczowa',
 		},
 		secondInfoCard: {
 			title: 'DELFIN SP. z o. o.',
 			description:
 				'Producent przydomowych oczyszczalni ścieków, separatorów węglowodorów, separatorów tłuszczów i skrobi, ekologicznych zbiorników na wodę deszczową oraz akcesoriów do systemów oczyszczania ścieków.',
-			buttonText: 'skontaktuj się z nami',
+			buttonText: 'strona partnera',
 			img: dLargeLogo,
 			alt: 'www.asroom.pl - Delfin sp. z o. o. zdjęcie wyrożniające',
 			direction: '--right',
 			colorName: '--blue',
 			link: 'http://www.delfin-polska.pl/',
+			images: [dLargeLogo],
 		},
 		slider: {
 			images: [slide1, slide2, slide3, slide4, slide5, slide6],
@@ -71,6 +76,7 @@ export default class SewageTreatmentSystemsComponent extends React.Component<any
 			alt: 'www.asroom.pl - Delfin sp. z o. o. zdjęcie wyrożniające',
 			direction: '--right',
 			colorName: '--blue',
+			images: [separatory],
 		},
 		contact: {
 			title: 'skontaktuj się z nami',
@@ -105,7 +111,7 @@ export default class SewageTreatmentSystemsComponent extends React.Component<any
 				<InfoCardComponent data={this.state.firstInfoCard} />
 				<InfoCardComponent data={this.state.secondInfoCard} />
 				<SliderComponent data={this.state.slider} />
-				<InfoCardComponent data={this.state.thirdInfoCard} />
+				{/* <InfoCardComponent data={this.state.thirdInfoCard} /> */}
                 <ContactComponent data={this.state.contact} />
             </div>
         );
