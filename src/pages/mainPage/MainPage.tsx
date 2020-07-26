@@ -33,6 +33,7 @@ export default class MainPageComponent extends React.Component<Props, any> {
 			direction: '',
 			colorName: '--red',
 			images: [technologicalSolutions,dBLogo],
+			scrollToSection: () => {window.scrollTo({ behavior: 'smooth', top: window.document.body.offsetHeight - window.innerHeight, left: 0})},
 		},
 		heroCard: {
 			title: '',

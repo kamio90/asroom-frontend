@@ -15,36 +15,11 @@ interface Props {
 		colorName: string;
 		link ? : string;
 		images: string[];
+		scrollToSection ? : () => void;
 	};
 }
 
 export default class InfoCardComponent extends React.Component<Props, any> {
-	componentDidMount() {
-		// let imagesTab = Array.prototype.slice.call(document.querySelectorAll('.infoCard__box:not(.infoCard__box--right) .infoCard__box__imgHolder img'));
-		// let img_count = imagesTab.length;
-		// console.log(img_count);
-		// let active_index = 0;
-
-		// imagesTab.forEach((element, index) => {
-		// 	if(index == 0) {
-		// 		element.classList.add('active');
-		// 	}
-		// })
-
-		// setInterval(() => {
-		// 	let active_img = document.querySelector('.faded.active');
-		// 	console.log(imagesTab.indexOf(active_img));
-		// 	if(imagesTab.indexOf(active_img) == img_count - 1) {
-		// 		active_index = 0;
-		// 	} else {
-		// 		active_index++;
-		// 	}
-
-		// 	active_img!.classList.remove('active');
-		// 	document.querySelectorAll('.infoCard__box:not(.infoCard__box--right) .infoCard__box__imgHolder img')[active_index].classList.add('active');
-		// }, 2000);
-	}
-
 	render() {
 		const {
 			alt,
@@ -56,6 +31,7 @@ export default class InfoCardComponent extends React.Component<Props, any> {
 			title,
 			link,
 			images,
+			scrollToSection,
 		} = this.props.data;
 
 		const settings = {
@@ -86,7 +62,7 @@ export default class InfoCardComponent extends React.Component<Props, any> {
 						<p className={'infoCard__box__textHolder__description'}>
 							{description}
 						</p>
-						<button className={`infoCard__box__textHolder__button infoCard__box__textHolder__button${colorName}`}>
+						<button className={`infoCard__box__textHolder__button infoCard__box__textHolder__button${colorName}`} onClick={scrollToSection}>
 							{this.props.data.link ? <a href={`${link}`}>{buttonText}</a> : `${buttonText}`}
 							<span className={`infoCard__box__textHolder__button__line infoCard__box__textHolder__button__line${colorName}`} />
 						</button>

@@ -93,10 +93,12 @@ class App extends React.Component<any, State> {
 					{
 						href: '/',
 						text: 'O nas',
+						param: window.innerHeight,
 					},
 					{
 						href: '/',
 						text: 'Kontakt',
+						param: 4 * window.innerHeight,
 					},
 				],
 				downPanel: {
@@ -160,10 +162,12 @@ class App extends React.Component<any, State> {
 					{
 						href: '/',
 						text: 'About Us',
+						param: window.innerHeight,
 					},
 					{
 						href: '/',
 						text: 'Contact',
+						param: 4 * window.innerHeight,
 					},
 				],
 				downPanel: {

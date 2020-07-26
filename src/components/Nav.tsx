@@ -21,6 +21,7 @@ interface Props {
         pageLink: {
             href: string;
             text: string;
+            param: number;
         }[];
         downPanel: {
             language: string[];
@@ -98,6 +99,7 @@ export default class NavComponent extends React.Component<Props, State> {
                                 key={index}
                                 text={value.text}
                                 href={value.href}
+                                param={value.param}
                             />
                         ))}
                     </div>
@@ -274,15 +276,18 @@ export default class NavComponent extends React.Component<Props, State> {
 interface Props3 {
     href: string;
     text: string;
+    param: number;
 }
 
 export class NavComponentPageLink extends React.Component<Props3, any> {
+    scrolledTo = (param: number) => {
+        window.scrollTo({ behavior: 'smooth', top:param, left: 0});
+    }
+
     render() {
         const {href, text} = this.props;
         return (
-            <Link to={href} className={`topPanel__pageNavigation__link`} onClick={() => {
-                window.scrollTo({ behavior: 'smooth', top: window.document.body.offsetHeight - window.innerHeight, left: 0});
-            }} >
+            <Link to={href} className={`topPanel__pageNavigation__link`} onClick={() => this.scrolledTo(this.props.param)} >
                 {text}
             </Link>
         );
