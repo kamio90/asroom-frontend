@@ -59,7 +59,8 @@ export default class ModernizationComponent extends React.Component<Props, any> 
 			acceptationText: 'Akceptuję regulamin',
 			colorName: '--red',
 			copyrightText:
-				'Wszystkie prawa zastrzeżone. 2020 © ASRoom - Powered by LoremIpsum',
+				'Wszystkie prawa zastrzeżone. 2020 © ASRoom',
+			copyrightTextContinue: 'Wykonanie ITroom.pl',
 			addressInfo: {
 				city: 'KRAKÓW',
 				street: '31-314 Zygmuntowska 12/4',

@@ -9,7 +9,9 @@ import mainImg from './../../img/pobrane-2.png';
 import mlLogo from './../../img/ML-SYSTEM-logo.png';
 import dLogo from './../../img/delfin-logo.png';
 import dBLogo from './../../img/Delfin_blue_logo.png';
-import technologicalSolutions from './../../img/technological-solutions.png';
+// import technologicalSolutions from './../../img/technological-solutions.png';
+import technologicalSolutions from './../../img/office-1209640_960_720.webp';
+import technologicalSolutions2 from './../../img/writing-1149962_960_720.webp';
 import slide1 from './../../img/IMG_1876.png';
 import slide2 from './../../img/domek1.png';
 import slide3 from './../../img/domek2.png';
@@ -32,7 +34,7 @@ export default class MainPageComponent extends React.Component<Props, any> {
 			alt: 'www.asroom.pl - zdjecie wyrozniajace',
 			direction: '',
 			colorName: '--red',
-			images: [technologicalSolutions,dBLogo],
+			images: [technologicalSolutions,technologicalSolutions2],
 			scrollToSection: () => {window.scrollTo({ behavior: 'smooth', top: window.document.body.offsetHeight - window.innerHeight, left: 0})},
 		},
 		heroCard: {
@@ -65,7 +67,8 @@ export default class MainPageComponent extends React.Component<Props, any> {
 			acceptationText: 'Akceptuję regulamin',
 			colorName: '--red',
 			copyrightText:
-				'Wszystkie prawa zastrzeżone. 2020 © ASRoom - Powered by LoremIpsum',
+				'Wszystkie prawa zastrzeżone. 2020 © ASRoom',
+			copyrightTextContinue: 'Wykonanie ITroom.pl',
 			addressInfo: {
 				city: 'KRAKÓW',
 				street: '31-314 Zygmuntowska 12/4',

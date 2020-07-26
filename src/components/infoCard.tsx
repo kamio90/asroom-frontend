@@ -39,7 +39,7 @@ export default class InfoCardComponent extends React.Component<Props, any> {
             infinite: true,
             fade: true,
             arrows: false,
-			// autoplay: true,
+			autoplay: true,
 			centerMode: true,
             speed: 2000,
             autoplaySpeed: 3000,

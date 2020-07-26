@@ -99,8 +99,8 @@ export default class RenewableEnergySourcesComponent extends React.Component<
 			buttonText: 'wyślij',
 			acceptationText: 'Akceptuję regulamin',
 			colorName: '--green',
-			copyrightText:
-				'Wszystkie prawa zastrzeżone. 2020 © ASRoom - Powered by LoremIpsum',
+			copyrightText:'Wszystkie prawa zastrzeżone. 2020 © ASRoom',
+			copyrightTextContinue: 'Wykonanie ITroom.pl',
 			addressInfo: {
 				city: 'KRAKÓW',
 				street: '31-314 Zygmuntowska 12/4',

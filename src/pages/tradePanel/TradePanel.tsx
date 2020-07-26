@@ -37,8 +37,8 @@ export default class TradePanelComponent extends React.Component<any, any> {
 			buttonText: 'wyślij',
 			acceptationText: 'Akceptuję regulamin',
 			colorName: '--orange',
-			copyrightText:
-				'Wszystkie prawa zastrzeżone. 2020 © ASRoom - Powered by LoremIpsum',
+			copyrightText: 'Wszystkie prawa zastrzeżone. 2020 © ASRoom',
+			copyrightTextContinue: 'Wykonanie ITroom.pl',
 			addressInfo: {
 				city: 'KRAKÓW',
 				street: '31-314 Zygmuntowska 12/4',

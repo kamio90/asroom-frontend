@@ -8,6 +8,7 @@ interface Props {
 		acceptationText: string;
 		colorName: string;
 		copyrightText: string;
+		copyrightTextContinue: string;
 		addressInfo: {
 			city: string;
 			street: string;
@@ -33,6 +34,7 @@ export default class ContactComponent extends React.Component<Props, any> {
 			copyrightText,
 			addressInfo,
 			fields,
+			copyrightTextContinue,
 		} = this.props.data;
 
 		return (
@@ -105,7 +107,10 @@ export default class ContactComponent extends React.Component<Props, any> {
 						</p>
 					</div>
 				</div>
-				<div className='footerContact__copyright'>{copyrightText}</div>
+				<div className='footerContact__copyright'>
+					<p>{copyrightText}</p>
+					<p>{copyrightTextContinue}</p>
+					</div>
 			</section>
 		);
 	}

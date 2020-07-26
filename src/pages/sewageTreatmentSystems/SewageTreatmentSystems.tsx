@@ -12,12 +12,10 @@ import dLogo from './../../img/delfin-logo.png';
 import dLargeLogo from './../../img/logo_delfin.png';
 import dBLogo from './../../img/Delfin_blue_logo.png';
 import separatory from './../../img/sep-weglo.png';
-import slide1 from './../../img/IMG_1876.png';
-import slide2 from './../../img/domek1.png';
-import slide3 from './../../img/domek2.png';
-import slide4 from './../../img/DSC00421.png';
-import slide5 from './../../img/IMG_1842.png';
-import slide6 from './../../img/DJI_0044.png';
+import slide1 from './../../img/47.jpg';
+import slide2 from './../../img/264.jpg';
+import slide3 from './../../img/536.jpg';
+import slide4 from './../../img/41.jpg';
 
 interface Props {
     changePathName: (param: string) => void;
@@ -65,7 +63,7 @@ export default class SewageTreatmentSystemsComponent extends React.Component<any
 			images: [dLargeLogo],
 		},
 		slider: {
-			images: [slide1, slide2, slide3, slide4, slide5, slide6],
+			images: [slide1, slide2, slide3, slide4],
 		},
 		thirdInfoCard: {
 			title: 'hybrydowe separatory węglowodorów',
@@ -83,8 +81,8 @@ export default class SewageTreatmentSystemsComponent extends React.Component<any
 			buttonText: 'wyślij',
 			acceptationText: 'Akceptuję regulamin',
 			colorName: '--blue',
-			copyrightText:
-				'Wszystkie prawa zastrzeżone. 2020 © ASRoom - Powered by LoremIpsum',
+			copyrightText:'Wszystkie prawa zastrzeżone. 2020 © ASRoom',
+			copyrightTextContinue: 'Wykonanie ITroom.pl',
 			addressInfo: {
 				city: 'KRAKÓW',
 				street: '31-314 Zygmuntowska 12/4',
