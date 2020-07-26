@@ -63,7 +63,7 @@ export default class InfoCardComponent extends React.Component<Props, any> {
 							{description}
 						</p>
 						<button className={`infoCard__box__textHolder__button infoCard__box__textHolder__button${colorName}`} onClick={scrollToSection}>
-							{this.props.data.link ? <a href={`${link}`}>{buttonText}</a> : `${buttonText}`}
+							{this.props.data.link ? <a href={`${link}`} target="_blank">{buttonText}</a> : `${buttonText}`}
 							<span className={`infoCard__box__textHolder__button__line infoCard__box__textHolder__button__line${colorName}`} />
 						</button>
 					</div>
