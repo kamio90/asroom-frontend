@@ -260,6 +260,16 @@
       }
       @media all and (max-width: 768px) {
         height: 250px;
+        flex-basis: 250px;
+        width: 100%;
+
+        .slick-slider {
+          height: 100%;
+
+          div {
+            height: 100%;
+          }
+        }
       }
 
       img {

@@ -47,6 +47,14 @@ export default class InfoCardComponent extends React.Component<Props, any> {
             slidesToScroll: 1,
 			pauseOnHover: false,
 			// variableWidth: true,
+			responsive: [
+                {
+                    breakpoint: 768,
+                    settings: {
+                        centerPadding: '0',
+                    }
+                }
+            ]
 		}
 
 		return (

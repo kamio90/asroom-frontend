@@ -29,6 +29,11 @@
 				@media all and (max-width: 980px) {
 					font-size: 5rem;
 				}
+
+				@media all and (max-width: 480px) {
+					font-size: 3.5rem;
+					padding: 2rem 2rem 2rem 5rem;
+				}
 				.special{
 					font-weight: 400;
 					&--red{
@@ -45,6 +50,10 @@
 
 			&__description {
 				padding: 2rem 10rem 2rem 10rem;
+
+				@media all and (max-width: 480px) {
+					padding: 2rem 2rem 2rem 5rem;
+				}
 			}
 
 			&__button {

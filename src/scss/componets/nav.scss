@@ -188,6 +188,10 @@
     @include flex-basis(10%);
     @include flex-justify-align(space-around, center);
 
+    @media all and (max-width: 480px) {
+      flex-basis: 100%;
+    }
+
     &__burger {
       width: 3.6rem;
       height: 3.6rem;
@@ -216,7 +220,7 @@
       margin-left: 50px;
       @media (min-width: 320px) and (max-width: 480px) {
         height: auto;
-        width: 23rem;
+        width: 10rem;
         padding-left: 3rem;
       }
     }
