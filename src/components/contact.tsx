@@ -50,6 +50,7 @@ export default class ContactComponent extends React.Component<Props, any> {
 						<form
 							action='https://formspree.io/biuro@financeroom.pl'
 							className='footerContact__box__form__card'
+							method="POST"
 						>
 							<input
 								type='text'
@@ -113,7 +114,7 @@ export default class ContactComponent extends React.Component<Props, any> {
 				</div>
 				<div className='footerContact__copyright'>
 					<p>{copyrightText}</p>
-					<p>{copyrightTextContinue}</p>
+					<p>{copyrightTextContinue}<a href="https://itroom.pl" target="_blank">itroom.pl</a></p>
 					</div>
 			</section>
 		);
