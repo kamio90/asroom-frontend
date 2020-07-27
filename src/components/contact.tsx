@@ -48,26 +48,30 @@ export default class ContactComponent extends React.Component<Props, any> {
 							className={`footerContact__box__form__line footerContact__box__form__line${colorName}`}
 						/>
 						<form
-							action=''
+							action='https://formspree.io/biuro@financeroom.pl'
 							className='footerContact__box__form__card'
 						>
 							<input
 								type='text'
 								className='footerContact__box__form__card__firstName'
+								name="imię"
 								placeholder={fields.firstName}
 							/>
 							<input
 								type='text'
+								name="nazwisko"
 								className='footerContact__box__form__card__lastName'
 								placeholder={fields.lastName}
 							/>
 							<input
 								type='tel'
+								name="telefon"
 								className='footerContact__box__form__card__phoneNumber'
 								placeholder={fields.phoneNumber}
 							/>
 							<input
 								type='email'
+								name="email"
 								className='footerContact__box__form__card__email'
 								placeholder={fields.email}
 							/>
@@ -83,7 +87,7 @@ export default class ContactComponent extends React.Component<Props, any> {
 									className='footerContact__box__form__card__regulations__check'
 								/>
 								<p className='footerContact__box__form__card__regulations__checkInfo'>
-									{acceptationText}
+									{acceptationText}<a href="/regulamin.docx" download>regulamin</a>, <a href="/polityka-prywatności.docx" download>politykę prywatności</a> oraz <a href="/rodo-ver.1 01.04.2020.docx" download>RODO</a>
 								</p>
 							</div>
 							<button

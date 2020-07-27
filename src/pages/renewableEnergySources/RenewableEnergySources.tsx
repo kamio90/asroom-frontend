@@ -97,7 +97,7 @@ export default class RenewableEnergySourcesComponent extends React.Component<
 		contact: {
 			title: 'skontaktuj się z nami',
 			buttonText: 'wyślij',
-			acceptationText: 'Akceptuję regulamin',
+			acceptationText: 'Akceptuję ',
 			colorName: '--green',
 			copyrightText:'Wszystkie prawa zastrzeżone. 2020 © ASRoom',
 			copyrightTextContinue: 'Wykonanie ITroom.pl',

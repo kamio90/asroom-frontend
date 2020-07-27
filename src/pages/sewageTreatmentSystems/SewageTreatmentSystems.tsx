@@ -79,7 +79,7 @@ export default class SewageTreatmentSystemsComponent extends React.Component<any
 		contact: {
 			title: 'skontaktuj się z nami',
 			buttonText: 'wyślij',
-			acceptationText: 'Akceptuję regulamin',
+			acceptationText: 'Akceptuję ',
 			colorName: '--blue',
 			copyrightText:'Wszystkie prawa zastrzeżone. 2020 © ASRoom',
 			copyrightTextContinue: 'Wykonanie ITroom.pl',

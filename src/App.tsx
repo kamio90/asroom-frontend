@@ -1,10 +1,9 @@
 import React from 'react';
 import NavComponent from './components/Nav';
 import ASRoomLogo from './img/logo-asroom.png';
-// import ASRoomLogo from './img/ASRoomLogo.png';
+import CookieConsent from "react-cookie-consent";
 
 interface State {
-	// height: any;
 	isPL: boolean;
 	PL: {
 		Nav: {
@@ -58,7 +57,6 @@ interface State {
 
 class App extends React.Component<any, State> {
 	state = {
-		// height: 0,
 		isPL: true,
 		PL: {
 			Nav: {
@@ -241,6 +239,14 @@ class App extends React.Component<any, State> {
 	render() {
 		return (
 			<div className='App'>
+				<CookieConsent
+					location="bottom"
+					buttonText="Akceptuję"
+					cookieName="cookies"
+					style={{ background: "#D9D9D9", fontSize: "16px", color: "#000" }}
+					buttonStyle={{ color: "#FFF", fontSize: "16px", background: "#a43030" }}
+					expires={50}
+				>Ta strona korzysta z plików  cookie, aby zwiększyć komfort użytkowania.</CookieConsent>
 				<NavComponent
 					Nav={
 						this.state.isPL ? this.state.PL.Nav : this.state.EN.Nav

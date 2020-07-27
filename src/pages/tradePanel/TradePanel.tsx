@@ -35,7 +35,7 @@ export default class TradePanelComponent extends React.Component<any, any> {
 		contact: {
 			title: 'skontaktuj się z nami',
 			buttonText: 'wyślij',
-			acceptationText: 'Akceptuję regulamin',
+			acceptationText: 'Akceptuję ',
 			colorName: '--orange',
 			copyrightText: 'Wszystkie prawa zastrzeżone. 2020 © ASRoom',
 			copyrightTextContinue: 'Wykonanie ITroom.pl',
