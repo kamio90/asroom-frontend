@@ -93,7 +93,7 @@ export default class MainPageComponent extends React.Component<Props, any> {
         return (
             <div>
                 <HeroComponent data={this.state.heroCard} />
-				<InfoCardSliderComponent data={this.state.firstInfoCard} />
+				<InfoCardComponent data={this.state.firstInfoCard} />
 				<PartnersComponent data={this.state.partners} />
 				<SliderComponent data={this.state.slider} />
                 <ContactComponent data={this.state.contact} />
