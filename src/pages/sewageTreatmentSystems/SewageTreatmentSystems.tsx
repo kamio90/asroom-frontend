@@ -28,7 +28,7 @@ export default class SewageTreatmentSystemsComponent extends React.Component<any
 			titleSpecial: 'oczyszczania ',
 			titleContinue: 'ścieków',
 			description:
-				'Skuteczniej niż tradycyjne oczyszczalnie. Linia nowoczesnych jednozbiornikowych oczyszczalni przydomowych. Wysoki stopień oczyszczania.',
+				'Dbasz o środowisko - dbasz o siebie i swoją przyszłość. Zbieranie deszczówki to coraz bardziej popularny sposób na świadome i oszczędne gospodarowanie wodą w gospodarstwie. Do tego dochodzi rownież aspekt ekonomiczny, bowiem woda drożeje, a w czasach suszy obowiazują liczne ograniczenia na jej powszeche użytkowanie.',
 			buttonText: 'dowiedz się więcej',
 			img: slupskImg,
 			alt: 'ASroom - innowacyjna firma',
@@ -39,7 +39,7 @@ export default class SewageTreatmentSystemsComponent extends React.Component<any
 			},
 		},
 		firstInfoCard: {
-			title: 'Zbiorniki na wodę deszczową',
+			title: 'Zbiorniki na wodę opadową',
 			description:
 				'Zbiorniki na wodę deszczową DELFIN RAIN pomagają zmniejszyć zużycie wody w przeciętnym gospodarstwie domowym do 30%. To niebagatelna oszczędność zważywszy na zwiększające się ceny wody, wynikające z rosnących kosztów jej wydobycia i uzdatnienia.',
 			buttonText: 'sprawdź',
@@ -53,7 +53,7 @@ export default class SewageTreatmentSystemsComponent extends React.Component<any
 		secondInfoCard: {
 			title: 'DELFIN SP. z o. o.',
 			description:
-				'Producent przydomowych oczyszczalni ścieków, separatorów węglowodorów, separatorów tłuszczów i skrobi, ekologicznych zbiorników na wodę deszczową oraz akcesoriów do systemów oczyszczania ścieków.',
+				'Polski lider w dziedzinie produkcji przydomowych oczyszczalni ścieków, zbiorników na wodę deszczową oraz opatentowantych w większości krajów europy wysoko sprawnych sepatarów węglowodorowych.',
 			buttonText: 'strona partnera',
 			img: dLargeLogo,
 			alt: 'www.asroom.pl - Delfin sp. z o. o. zdjęcie wyrożniające',

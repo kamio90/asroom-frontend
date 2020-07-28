@@ -114,7 +114,7 @@ export default class ContactComponent extends React.Component<Props, any> {
 				</div>
 				<div className='footerContact__copyright'>
 					<p>{copyrightText}</p>
-					<p>{copyrightTextContinue}<a href="https://itroom.pl" target="_blank">itroom.pl</a></p>
+					<p>{copyrightTextContinue}<a href="https://itroom.pl" target="_blank">ITRoom.pl</a></p>
 					</div>
 			</section>
 		);

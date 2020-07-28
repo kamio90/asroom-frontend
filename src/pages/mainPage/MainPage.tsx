@@ -28,7 +28,7 @@ export default class MainPageComponent extends React.Component<Props, any> {
 		firstInfoCard: {
 			title: 'ASROOM ZAPEWNIA najlepsze rozwiązania TECHNOLOGICZNE',
 			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae felis quis lacus. Cras ut erat vitae enim efficitur porta vel a lorem. Curabitur tempus lacus ut odio vestibulum, nec vehicula nunc lobortis. Duis placerat, at fermentum tellus mollis a. Cras hendrerit felis neque, ut fermentum turpis porta vel. ',
+				'Nieustannie poszerzamy swoja oferte zaczelismy od doradctwa finansowego oraz konsultingu a dzis oferujemy najlepsze na rynku rozwiazana z dziedziny fotowoltaiki i urzadzenia do odzysku woduy opadowej wspieramy naszych klientow  od poczatku do konca inwestycji Nie uznajemy kompromisów – zadowolenie klienta jest dla nas priorytetem.',
 			buttonText: 'skontaktuj się z nami',
 			img: technologicalSolutions,
 			alt: 'www.asroom.pl - zdjecie wyrozniajace',
@@ -42,7 +42,7 @@ export default class MainPageComponent extends React.Component<Props, any> {
 			titleSpecial: 'as',
 			titleContinue: 'room',
 			description:
-				'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae felis quis lacus. Cras ut erat vitae enim efficitur porta vel a lorem. Curabitur tempus lacus ut odio vestibulum,',
+				'ASROOM Sp. z o.o. dziala na rynku od 2014r. Firma od początku stawiała na innowacyjność, ciągły rozwój i dobro klienta. Nieustannie podnosi swoje kwalifikacje, by swoim klientom oferować najoptymalniejsze rozwiązania rynkowe.',
 			buttonText: 'dowiedz się więcej',
 			img: mainImg,
 			alt: 'ASroom - innowacyjna firma',
@@ -54,7 +54,7 @@ export default class MainPageComponent extends React.Component<Props, any> {
 		},
 		partners: {
 			title: 'Nasi partnerzy',
-			description: 'SmartPixel has been designing cutting-edge applications combining state-of-the-art technology with tactile systems to communicate information through unforgettable experiences since 2008.',
+			description: 'Naszymi partnerami sa Polscy liderzy w branżach energii odnawialnej i gospodarki wodno sciekowej ich długoletnie doświadczenie i liczne nagrody najlepsze z możliwych rozwiązań oraz zapewniają stabilność dostaw i gwarancje długoletniej opieki serwisowej, między innymi: Godło Teraz Polska, Skrzydla Biznesu oraz Gepard Biznesu.',
 			images: [mlLogo, dLogo, mlLogo, dLogo, mlLogo, dLogo],
 			colorName: '--red',
 		},
