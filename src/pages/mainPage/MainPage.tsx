@@ -3,13 +3,14 @@ import HeroComponent from '../../components/hero';
 import InfoCardComponent from '../../components/infoCard';
 import PartnersComponent from '../../components/partners';
 import SliderComponent from '../../components/slider';
+import InfoCardSliderComponent from '../../components/infoCardSlide';
 import ContactComponent from '../../components/contact';
 
 import mainImg from './../../img/pobrane-2.png';
 import mlLogo from './../../img/ML-SYSTEM-logo.png';
 import dLogo from './../../img/delfin-logo.png';
 import dBLogo from './../../img/Delfin_blue_logo.png';
-// import technologicalSolutions from './../../img/technological-solutions.png';
+import technologicalSolutions1 from './../../img/technological-solutions.png';
 import technologicalSolutions from './../../img/office-1209640_960_720.webp';
 import technologicalSolutions2 from './../../img/writing-1149962_960_720.webp';
 import slide1 from './../../img/IMG_1876.png';
@@ -34,7 +35,7 @@ export default class MainPageComponent extends React.Component<Props, any> {
 			alt: 'www.asroom.pl - zdjecie wyrozniajace',
 			direction: '',
 			colorName: '--red',
-			images: [technologicalSolutions,technologicalSolutions2],
+			images: [technologicalSolutions,technologicalSolutions1, technologicalSolutions2],
 			scrollToSection: () => {window.scrollTo({ behavior: 'smooth', top: window.document.body.offsetHeight - window.innerHeight, left: 0})},
 		},
 		heroCard: {
@@ -92,7 +93,7 @@ export default class MainPageComponent extends React.Component<Props, any> {
         return (
             <div>
                 <HeroComponent data={this.state.heroCard} />
-				<InfoCardComponent data={this.state.firstInfoCard} />
+				<InfoCardSliderComponent data={this.state.firstInfoCard} />
 				<PartnersComponent data={this.state.partners} />
 				<SliderComponent data={this.state.slider} />
                 <ContactComponent data={this.state.contact} />

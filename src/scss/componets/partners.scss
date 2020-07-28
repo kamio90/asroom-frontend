@@ -139,6 +139,10 @@
             height: 400px;
             position: relative;
 
+            @media all and (max-width: 1280px) {
+                order: 1;
+            }
+
             @media (min-width: 1025px) and (max-width: 1280px) {
               flex-basis: 100%;
             }
