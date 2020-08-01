@@ -29,7 +29,7 @@ export default class MainPageComponent extends React.Component<Props, any> {
 		firstInfoCard: {
 			title: 'ASROOM ZAPEWNIA najlepsze rozwiązania TECHNOLOGICZNE',
 			description:
-				'Nieustannie poszerzamy swoja oferte zaczelismy od doradctwa finansowego oraz konsultingu a dzis oferujemy najlepsze na rynku rozwiazana z dziedziny fotowoltaiki i urzadzenia do odzysku woduy opadowej wspieramy naszych klientow  od poczatku do konca inwestycji Nie uznajemy kompromisów – zadowolenie klienta jest dla nas priorytetem.',
+				'Nieustannie poszerzamy swoją ofertę, zaczęliśmy od doradctwa finansowego oraz konsultingu, a dziś oferujemy najlepsze na rynku rozwiązania z dziedziny fotowoltaiki i urządzenia do odzysku wody opadowej. Wspieramy naszych klientów od początku do końca inwestycji. Nie uznajemy kompromisów – zadowolenie klienta jest dla nas priorytetem.',
 			buttonText: 'skontaktuj się z nami',
 			img: technologicalSolutions,
 			alt: 'www.asroom.pl - zdjecie wyrozniajace',
@@ -55,7 +55,7 @@ export default class MainPageComponent extends React.Component<Props, any> {
 		},
 		partners: {
 			title: 'Nasi partnerzy',
-			description: 'Naszymi partnerami sa Polscy liderzy w branżach energii odnawialnej i gospodarki wodno sciekowej ich długoletnie doświadczenie i liczne nagrody najlepsze z możliwych rozwiązań oraz zapewniają stabilność dostaw i gwarancje długoletniej opieki serwisowej, między innymi: Godło Teraz Polska, Skrzydla Biznesu oraz Gepard Biznesu.',
+			description: 'Naszymi partnerami sa polscy liderzy w branżach energii odnawialnej i gospodarki wodno ściekowej. Ich długoletnie doświadczenie i liczne nagrody, najlepsze z możliwych rozwiązań, zapewniają stabilność dostaw i gwarancje długoletniej opieki serwisowej, między innymi: Godło Teraz Polska, Skrzydla Biznesu oraz Gepard Biznesu.',
 			images: [mlLogo, dLogo, mlLogo, dLogo, mlLogo, dLogo],
 			colorName: '--red',
 		},
